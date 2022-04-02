@@ -26,7 +26,7 @@ function OnSubmit(eventInfo){
     localStorage.setItem(USERNAME_KEY, username);
 
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    paintGreeting();
+    paintGreeting(username);
 }
 
 
