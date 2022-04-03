@@ -51,11 +51,25 @@ const quotes = [
     },
 ]
 
-const quote = document.querySelector("#quote span:first-child");
-const quoteKorean = document.querySelector("#quote-korean");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote");
+const quoteEnglish = document.createElement("span");
+const quoteKorean = document.createElement("span");
+const author = document.createElement("span");
+function getBrElement(){
+    return document.createElement("br");
+}
+
+function addQuoteProperty(property){
+    quote.appendChild(getBrElement());
+    quote.appendChild(property);
+}
+
+addQuoteProperty(quoteEnglish);
+addQuoteProperty(quoteKorean);
+addQuoteProperty(author);
 
 const quoteData = quotes[Math.floor(Math.random() * quotes.length)];
-quote.innerText = quoteData.quote;
+
+quoteEnglish.innerText = quoteData.quote;
 quoteKorean.innerText = quoteData.korean;
 author.innerText = quoteData.author;
