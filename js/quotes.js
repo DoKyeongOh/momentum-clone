@@ -52,8 +52,10 @@ const quotes = [
 ]
 
 const quote = document.querySelector("#quote span:first-child");
+const quoteKorean = document.querySelector("#quote-korean");
 const author = document.querySelector("#quote span:last-child");
 
-const index = Math.floor(Math.random() * quotes.length);
-quote.innerText = quotes[index].quote;
-author.innerText = quotes[index].author;
+const quoteData = quotes[Math.floor(Math.random() * quotes.length)];
+quote.innerText = quoteData.quote;
+quoteKorean.innerText = quoteData.korean;
+author.innerText = quoteData.author;
