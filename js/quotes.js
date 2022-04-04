@@ -66,7 +66,7 @@ const quotes = [
   },
 ];
 
-const quote = document.querySelector("#quote");
+const quote = document.querySelector("#quotes");
 const quoteEnglish = document.createElement("span");
 const quoteKorean = document.createElement("span");
 const author = document.createElement("span");
